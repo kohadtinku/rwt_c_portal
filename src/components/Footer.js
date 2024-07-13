@@ -164,9 +164,8 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="container">
           <p className="copyright">
-            Copyright 2022 All Rights Reserved by{" "}
-            <a href="#" className="copyright-link">
-              codewithsadee
+          2024 | All Copyrights Reserved | <a href="#" className="copyright-link"> 
+                Design & Development by Royals WebTech Pvt. Ltd.
             </a>
           </p>
         </div>
