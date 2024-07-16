@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 
 import './App.css'; // Import your CSS
 import Home from './components/Home';
+import WebDevelopment from './components/WebDevelopment';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/courses" element={<Courses />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/webdevelopment" element={<WebDevelopment />} />
             {/* Add more routes as needed */}
           </Routes>
         </main>
