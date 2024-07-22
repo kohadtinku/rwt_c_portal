@@ -11,10 +11,13 @@ import java from '../assets/java.jpg'
 import node from '../assets/node.jpeg'
 import php from '../assets/php.jpg'
 import html from '../assets/html.png'
+import { Link } from 'react-router-dom'
+// import { courses } from './CoursesData';
 const WebDevelopment = () => {
 
     const courses = [
         {
+          id:1,
           imgSrc: img13,
           title: 'Master Full Stack Development with Java ',
           rating: 5.0,
@@ -22,6 +25,7 @@ const WebDevelopment = () => {
           duration: '3 Weeks',
         },
         {
+          id:2,
           imgSrc: img14,
           title: 'Build a Web App with MERN Stack Development',
           rating: 4.8,
@@ -29,29 +33,33 @@ const WebDevelopment = () => {
           duration: '4 Weeks',
         },
         {
+          id:3,
             imgSrc: img15,
             title: 'Build a Web App with PHP and MySQL Development',
             rating: 4.8,
             students: 45,
             duration: '4 Weeks',
           },
-        // Add more course objects as needed
+        
       ];
 
       const frontend = [
         {
+          id:4,
           imgSrc: img20,
           title: 'Build a Dyanamic Single page Applications with React',
           students: 37,
           duration: '4 Weeks',
         },
         {
+          id:5,
           imgSrc: img21,
           title: 'Learn javaScript with fun',
           students: 37,
           duration: '4 Weeks',
         },
         {
+             id:6,
             imgSrc: html ,
             title: 'Build Responsive Real World Websites with HTML and CSS',
             students: 37,
@@ -63,18 +71,21 @@ const WebDevelopment = () => {
 
       const Backend = [
         {
+          id:7,
           imgSrc: java,
           title: 'Java Programing Master class ',
           students: 37,
           duration: '4 Weeks',
         },
         {
+          id:8,
           imgSrc: node,
           title: 'Mastering JavaScript for BAckend development like node js',
           students: 37,
           duration: '4 Weeks',
         },
         {
+          id:9,
             imgSrc: php,
             title: 'Learn Php to build a dyanamic websites',
             students: 37,
@@ -122,21 +133,35 @@ const WebDevelopment = () => {
                 </h2>
               </div>
               <ul className="grid-list">
-              {courses.map((course, index) => (
-        <li key={index}>
-          <div className="course-card has-before">
-            <figure className="card-banner img-holder" style={{ '--width': 370, '--height': 220 }}>
-              <img src={course.imgSrc} width="370" height="220" loading="lazy" alt={course.title} className="img-cover" />
+              {courses.map(course => (
+        <li key={course.id} className="course-card has-before">
+          <div className="course-card-content">
+            <figure className="card-banner img-holder" style={{ '--width': '370px', '--height': '220px' }}>
+              <img 
+                src={course.imgSrc} 
+                width="370" 
+                height="220" 
+                loading="lazy" 
+                alt={course.title} 
+                className="img-cover" 
+              />
             </figure>
             <div className="card-content">
               <span className="badge">Free</span>
               <h3 className="h3">
-                <a href="#" className="card-title">{course.title}</a>
+                <Link to={`/coursedetail/${course.id}`} className="card-title">
+                  {course.title}
+                </Link>
               </h3>
               <div className="wrapper">
                 <div className="rating-wrapper">
-                  {[...Array(5)].map((star, i) => (
-                    <ion-icon key={i} name="star" aria-hidden="true"></ion-icon>
+                  {[...Array(5)].map((_, i) => (
+                    <ion-icon 
+                      key={i} 
+                      name="star" 
+                      aria-hidden="true"
+                      className={`rating-star ${i < Math.floor(course.rating) ? 'filled' : ''}`}
+                    ></ion-icon>
                   ))}
                 </div>
                 <p className="rating-text">{course.rating}</p>
@@ -170,33 +195,34 @@ const WebDevelopment = () => {
                 Get Started With <span className="span">Frontend</span>
               </h2>
               <ul className="grid-list">
-              {frontend.map((blog, index) => (
-        <li key={index}>
-          <div className="blog-card">
-            <figure className="card-banner img-holder" style={{ '--width': 370, '--height': 270 }}>
-              <img src={blog.imgSrc} width="370" height="270" loading="lazy" alt={blog.title} className="img-cover" />
-            </figure>
-            <div className="card-content">
-              <a href="#" className="card-btn" aria-label="read more">
-                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-              </a>
-              <h3 className="h3">
-                <a href="#" className="card-title">{blog.title}</a>
-              </h3>
-              <ul className="card-meta-list">
-                <li className="card-meta-item">
-                  <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
-                  <span className="span">{blog.students}</span>
-                </li>
-                <li className="card-meta-item">
-                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-                  <span className="span">{blog.duration}</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
-      ))}
+              {frontend.map((course) => (
+  <li key={course.id}>
+    <div className="blog-card">
+      <figure className="card-banner img-holder" style={{ '--width': 370, '--height': 270 }}>
+        <img src={course.imgSrc} width="370" height="270" loading="lazy" alt={course.title} className="img-cover" />
+      </figure>
+      <div className="card-content">
+        <a href="#" className="card-btn" aria-label="read more">
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+        </a>
+        <h3 className="h3">
+        <Link to={`/coursedetail/${course.id}`} className="card-title">
+                  {course.title}
+                </Link>        </h3>
+        <ul className="card-meta-list">
+          <li className="card-meta-item">
+            <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+            <span className="span">{course.students} Students</span>
+          </li>
+          <li className="card-meta-item">
+            <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+            <span className="span">{course.duration}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+))}
                 {/* <li>
                   <div className="blog-card">
                     <figure className="card-banner img-holder" style={{ '--width': 370, '--height': 270 }}>
@@ -261,33 +287,36 @@ const WebDevelopment = () => {
                Explore The  <span className="span">Backend</span> development courses
               </h2>
               <ul className="grid-list">
-              {Backend.map((blog, index) => (
-        <li key={index}>
-          <div className="blog-card">
-            <figure className="card-banner img-holder" style={{ '--width': 370, '--height': 270 }}>
-              <img src={blog.imgSrc} width="370" height="270" loading="lazy" alt={blog.title} className="img-cover" />
-            </figure>
-            <div className="card-content">
-              <a href="#" className="card-btn" aria-label="read more">
-                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-              </a>
-              <h3 className="h3">
-                <a href="#" className="card-title">{blog.title}</a>
-              </h3>
-              <ul className="card-meta-list">
-                <li className="card-meta-item">
-                  <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
-                  <span className="span">{blog.students}</span>
-                </li>
-                <li className="card-meta-item">
-                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-                  <span className="span">{blog.duration}</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
-      ))}
+              {Backend.map((course) => (
+  <li key={course.id}>
+    <div className="blog-card">
+      <figure className="card-banner img-holder" style={{ '--width': 370, '--height': 270 }}>
+        <img src={course.imgSrc} width="370" height="270" loading="lazy" alt={course.title} className="img-cover" />
+      </figure>
+      <div className="card-content">
+        <a href="#" className="card-btn" aria-label="read more">
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+        </a>
+        <h3 className="h3">
+        <Link to={`/coursedetail/${course.id}`} className="card-title">
+                  {course.title}
+                </Link> 
+        </h3>
+        <ul className="card-meta-list">
+          <li className="card-meta-item">
+            <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+            <span className="span">{course.students} Students</span>
+          </li>
+          <li className="card-meta-item">
+            <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+            <span className="span">{course.duration}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+))}
+
                
               </ul>
             </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Switch  } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './components/About';
@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import './App.css'; // Import your CSS
 import Home from './components/Home';
 import WebDevelopment from './components/WebDevelopment';
+import CourseDetail from './components/CourseDetail';
 
 const App = () => {
   return (
@@ -23,7 +24,10 @@ const App = () => {
             <Route path="/courses" element={<Courses />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+  
             <Route path="/webdevelopment" element={<WebDevelopment />} />
+            <Route path="/coursedetail/:id" element={<CourseDetail />} />
+           
             {/* Add more routes as needed */}
           </Routes>
         </main>
