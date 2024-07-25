@@ -22,7 +22,44 @@ import img19 from '../assets/blog-bg.svg'
 import img20 from '../assets/blog-1.jpg'
 import img21 from '../assets/blog-2.jpg'
 import img22 from '../assets/blog-3.jpg'
+import web from '../assets/web.jpg'
+import Android from '../assets/Android.jpeg'
+import hr from '../assets/hr2.jpeg'
+import digital from '../assets/digital.webp'
+
+import { Link } from 'react-router-dom'
 const Home = () => {
+
+  const courses = [
+    {
+      id: 6,
+      image: img13, // Replace with actual import or URL
+      title: "Build Responsive Real World Websites with HTML and CSS",
+      rating: 5.0,
+      students: 37,
+      duration: "3 Weeks",
+      badge: "Free",
+    },
+    {
+      id: 7,
+      image: img14, // Replace with actual import or URL
+      title: "Java Programming Masterclass for Software Developers",
+      rating: 4.8,
+      students: 42,
+      duration: "5 Weeks",
+      badge: "Free",
+    },
+    {
+      id: 4,
+      image: img15, // Replace with actual import or URL
+      title: "Build a Dyanamic Single page Applications with React",
+      rating: 5.0,
+      students: 37,
+      duration: "3 Weeks",
+      badge: "Free",
+    },
+  ];
+
   return (
     <>
     <main>
@@ -32,12 +69,12 @@ const Home = () => {
             <div className="container">
               <div className="hero-content">
                 <h1 className="h1 section-title">
-                  The Best Program to <span className="span">Enroll</span> for Exchange
+                  The Best Program to <span className="span">Enroll</span> for Industrial Training
                 </h1>
                 <p className="hero-text">
-                  Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.
+                Unlock Your Potential: Explore Our Top-Rated Courses and Start Learning Today!
                 </p>
-                <a href="#" className="btn has-before">
+                <a href="#category" className="btn has-before">
                   <span className="span">Find courses</span>
                   <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                 </a>
@@ -50,73 +87,71 @@ const Home = () => {
                   <img src={img2} width="240" height="370" alt="hero banner" className="img-cover" />
                 </div>
                 <img src={img3}  width="380" height="190" alt="" className="shape hero-shape-1" />
-                <img src={img4} width="622" height="551" alt="" className="shape hero-shape-2" />
+                {/* <img src={img4} width="622" height="551" alt="" className="shape hero-shape-2" /> */}
               </figure>
             </div>
           </section>
 
-          <section className="section category" aria-label="category">
+          <section className="section category" aria-label="category" id="category">
             <div className="container">
-              <p className="section-subtitle">Categories</p>
+              <p className="section-subtitle">Courses</p>
               <h2 className="h2 section-title">
-                Online <span className="span">Classes</span> For Remote Learning.
+              In-Person  <span className="span">Classes</span> For Comprehensive Learning.
               </h2>
-              <p className="section-text">Consectetur adipiscing elit sed do eiusmod tempor.</p>
+              <p className="section-text">Unlock Your Potential with Our Diverse Range of Courses</p>
               <ul className="grid-list">
                 <li>
                   <div className="category-card" style={{ '--color': '170, 75%, 41%' }}>
                     <div className="card-icon">
-                      <img src={img5} width="40" height="40" loading="lazy" alt="Online Degree Programs" className="img" />
+                      <img src={web} style={{borderRadius:'50px'}} loading="lazy" alt="Online Degree Programs" className="img" />
                     </div>
-                    <h3 className="h3">
-                      <a href="#" className="card-title">Online Degree Programs</a>
+                    <h3 className="h3" >
+                      <Link to="/webdevelopment" className="card-title" >Web Development</Link>
                     </h3>
                     <p className="card-text">
-                      Lorem ipsum dolor consec tur elit adicing sed umod tempor.
-                    </p>
-                    <span className="card-badge">7 Courses</span>
+
+                    Transform Your Ideas into Stunning Websites with Our Comprehensive Web Development Course                    </p>
+                    <Link to="/webdevelopment"><span className="card-badge">Learn More</span></Link>
                   </div>
                 </li>
                 <li>
                   <div className="category-card" style={{ '--color': '351, 83%, 61%' }}>
                     <div className="card-icon">
-                      <img src={img6} width="40" height="40" loading="lazy" alt="Non-Degree Programs" className="img" />
+                      <img src={Android}  style={{borderRadius:' var(--radius-circle)',width:"80px", height:"80px"}}  loading="lazy" alt="Non-Degree Programs" className="img" />
                     </div>
                     <h3 className="h3">
-                      <a href="#" className="card-title">Non-Degree Programs</a>
+                      <Link to="/mobileApp" className="card-title">Android App Development</Link>
                     </h3>
                     <p className="card-text">
-                      Lorem ipsum dolor consec tur elit adicing sed umod tempor.
-                    </p>
-                    <span className="card-badge">4 Courses</span>
+                    Bring Your Mobile Innovations to Life with Our Expert-Led Course                    </p>
+                    <Link to="/mobileApp"><span className="card-badge">Learn More</span></Link>
                   </div>
                 </li>
                 <li>
                   <div className="category-card" style={{ '--color': '229, 75%, 58%' }}>
                     <div className="card-icon">
-                      <img src={img7} width="40" height="40" loading="lazy" alt="Off-Campus Programs" className="img" />
+                      <img src={hr} style={{borderRadius:' var(--radius-circle)',width:"80px", height:"80px"}}  loading="lazy" alt="Off-Campus Programs" className="img" />
                     </div>
                     <h3 className="h3">
-                      <a href="#" className="card-title">Off-Campus Programs</a>
+                      <a href="/hrManagement" className="card-title">HR Management</a>
                     </h3>
                     <p className="card-text">
-                      Lorem ipsum dolor consec tur elit adicing sed umod tempor.
-                    </p>
-                    <span className="card-badge">8 Courses</span>
+                    Master the Art of Human Resource Management and lead your organization with confidence.                 </p>
+                    <Link to="/hrManagement"><span className="card-badge">Learn More</span></Link>
                   </div>
                 </li>
                 <li>
                   <div className="category-card" style={{ '--color': '42, 94%, 55%' }}>
                     <div className="card-icon">
-                      <img src={img8} width="40" height="40" loading="lazy" alt="Hybrid Distance Programs" className="img" />
+                      <img src={digital} style={{borderRadius:' var(--radius-circle)',width:"80px", height:"80px"}} loading="lazy" alt="Hybrid Distance Programs" className="img" />
                     </div>
                     <h3 className="h3">
-                      <a href="#" className="card-title">Hybrid Distance Programs</a>
+                      <Link to="" className="card-title">Digital MArketing</Link>
                     </h3>
                     <p className="card-text">
-                      Lorem ipsum dolor consec tur elit adicing sed umod tempor.
-                    </p>
-                    <span className="card-badge">8 Courses</span>
+
+                    Unlock the power of Digital Marketing and drive your business forward.                    </p>
+                    <span className="card-badge">Learn More</span>
                   </div>
                 </li>
               </ul>
@@ -136,19 +171,18 @@ const Home = () => {
               <div className="about-content">
                 <p className="section-subtitle">About Us</p>
                 <h2 className="h2 section-title">
-                  Take A Tour <span className="span">EduWeb</span>
+                  Take A Tour  <span className="span">Royals</span>
                 </h2>
-                <p className="section-text">
-                  Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod tempor incididunt labore dolore magna
-                  aliquaenim ad minim veniam quis nostrud exercitation ullamco.
+                <p className="section-text text-justify">
+                Royals Webtech Pvt. Ltd. is an innovation insightful imaginative company doing broadactivities in the field of Website Designing , Website Development Software Development and Mobile Application Development.
                 </p>
-                <ul className="about-list">
+                <ul className="about-list text-justify">
                   <li className="about-item">
                     <div className="about-icon">
                       <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
                     </div>
                     <p className="about-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Empowering Minds, Shaping Futures: Experience the Royal Standard in Education Today!
                     </p>
                   </li>
                   <li className="about-item">
@@ -156,7 +190,7 @@ const Home = () => {
                       <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
                     </div>
                     <p className="about-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    We take an iterative approach to both our work and our practice, always looking for ways to improve what we do.
                     </p>
                   </li>
                   <li className="about-item">
@@ -164,8 +198,8 @@ const Home = () => {
                       <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
                     </div>
                     <p className="about-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
+                    We’re a creative agency
+with an expertise in make custom websites.                     </p>
                   </li>
                 </ul>
                 <a href="#" className="btn has-before">
@@ -177,116 +211,57 @@ const Home = () => {
           </section>
 
           <section className="section course" id="courses" aria-labelledby="course-label">
-            <div className="container">
-              <div className="title-wrapper">
-                <p className="section-subtitle" id="course-label">Popular Courses</p>
-                <h2 className="h2 section-title">
-                  Pick A Course To Get Started
-                </h2>
+      <div className="container">
+        <div className="title-wrapper">
+          <p className="section-subtitle" id="course-label">Popular Courses</p>
+          <h2 className="h2 section-title">Pick A Course To Get Started</h2>
+        </div>
+        <ul className="grid-list">
+          {courses.map(course => (
+            <li key={course.id}>
+              <div className="course-card has-before">
+                <figure className="card-banner img-holder" style={{ '--width': 370, '--height': 220 }}>
+                  <img src={course.image} width="370" height="220" loading="lazy" alt={course.title} className="img-cover" />
+                </figure>
+                <div className="card-content">
+                  <span className="badge">{course.badge}</span>
+                  <h3 className="h3">
+                  <Link to={`/coursedetail/${course.id}`} className="card-title">
+                  {course.title}
+                </Link>                  </h3>
+                  <div className="wrapper">
+                    <div className="rating-wrapper">
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                        key={i}
+                        className={`w-5 ${i < Math.floor(course.rating) ? 'fill-yellow-400' : 'fill-[#CED5D8]'}`}
+                        viewBox="0 0 14 13"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                      </svg>
+                      ))}
+                    </div>
+                    {/* <p className="rating-text">{course.rating}</p> */}
+                  </div>
+                  <ul className="card-meta-list">
+                    <li className="card-meta-item">
+                      <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+                      <span className="span">{course.students} Students</span>
+                    </li>
+                    <li className="card-meta-item">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                      <span className="span">{course.duration}</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <ul className="grid-list">
-                <li>
-                  <div className="course-card has-before">
-                    <figure className="card-banner img-holder" style={{ '--width': 370, '--height': 220 }}>
-                      <img src={img13} width="370" height="220" loading="lazy" alt="Build Responsive Real World Websites with HTML and CSS" className="img-cover" />
-                    </figure>
-                    <div className="card-content">
-                      <span className="badge">Free</span>
-                      <h3 className="h3">
-                        <a href="#" className="card-title">Build Responsive Real World Websites with HTML and CSS</a>
-                      </h3>
-                      <div className="wrapper">
-                        <div className="rating-wrapper">
-                          <ion-icon name="star" aria-hidden="true"></ion-icon>
-                          <ion-icon name="star" aria-hidden="true"></ion-icon>
-                          <ion-icon name="star" aria-hidden="true"></ion-icon>
-                          <ion-icon name="star" aria-hidden="true"></ion-icon>
-                          <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        </div>
-                        <p className="rating-text">5.0</p>
-                      </div>
-                      <ul className="card-meta-list">
-                        <li className="card-meta-item">
-                          <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-                          <span className="span">37 Students</span>
-                        </li>
-                        <li className="card-meta-item">
-                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-                          <span className="span">3 Weeks</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="course-card has-before">
-                    <figure className="card-banner img-holder" style={{ '--width': 370, '--height': 220 }}>
-                      <img src={img14} width="370" height="220" loading="lazy" alt="Java Programming Masterclass for Software Developers" className="img-cover" />
-                    </figure>
-                    <div className="card-content">
-                      <span className="badge">Free</span>
-                      <h3 className="h3">
-                        <a href="#" className="card-title">Java Programming Masterclass for Software Developers</a>
-                      </h3>
-                      <div className="wrapper">
-                        <div className="rating-wrapper">
-                          <ion-icon name="star" aria-hidden="true"></ion-icon>
-                          <ion-icon name="star" aria-hidden="true"></ion-icon>
-                          <ion-icon name="star" aria-hidden="true"></ion-icon>
-                          <ion-icon name="star" aria-hidden="true"></ion-icon>
-                          <ion-icon name="star-half-outline" aria-hidden="true"></ion-icon>
-                        </div>
-                        <p className="rating-text">4.8</p>
-                      </div>
-                      <ul className="card-meta-list">
-                        <li className="card-meta-item">
-                          <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-                          <span className="span">42 Students</span>
-                        </li>
-                        <li className="card-meta-item">
-                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-                          <span className="span">5 Weeks</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="course-card has-before">
-                    <figure className="card-banner img-holder" style={{ '--width': 370, '--height': 220 }}>
-                      <img src={img15} width="370" height="220" loading="lazy" alt="The Complete Camtasia Course for Content Creators" className="img-cover" />
-                    </figure>
-                    <div className="card-content">
-                      <span className="badge">Free</span>
-                      <h3 className="h3">
-                        <a href="#" className="card-title">The Complete Camtasia Course for Content Creators</a>
-                      </h3>
-                      <div className="wrapper">
-                        <div className="rating-wrapper">
-                          <ion-icon name="star" aria-hidden="true"></ion-icon>
-                          <ion-icon name="star" aria-hidden="true"></ion-icon>
-                          <ion-icon name="star" aria-hidden="true"></ion-icon>
-                          <ion-icon name="star" aria-hidden="true"></ion-icon>
-                          <ion-icon name="star" aria-hidden="true"></ion-icon>
-                        </div>
-                        <p className="rating-text">5.0</p>
-                      </div>
-                      <ul className="card-meta-list">
-                        <li className="card-meta-item">
-                          <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-                          <span className="span">37 Students</span>
-                        </li>
-                        <li className="card-meta-item">
-                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-                          <span className="span">3 Weeks</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </section>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
 
           <section className="section video has-bg-image" aria-label="video" style={{ backgroundImage: `url(${img16})` }}>
           <div className="container">

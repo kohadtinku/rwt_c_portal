@@ -61,9 +61,9 @@ const CourseDetail = () => {
   return (
     <>
 
-<div className="font-sans p-8 pt-44 pb-20 tracking-wide max-lg:max-w-2xl mx-auto">
+<div className="font-sans p-8 pt-44 lg:pt-52 pb-20 tracking-wide max-lg:max-w-2xl mx-auto ">
       <div className="grid items-start grid-cols-1 lg:grid-cols-2 gap-10">
-        <div className="space-y-4 text-center lg:sticky top-8">
+        <div className="space-y-4 text-center lg:sticky top-80">
           <div className="bg-gray-100 p-4 flex items-center sm:h-[380px] rounded-lg">
             <img src={course.imgSrc} alt="Product" className="w-full max-h-full object-contain object-top" />
           </div>
@@ -71,8 +71,8 @@ const CourseDetail = () => {
 
         <div className="max-w-6xl">
           <div>
-            <h2 className="text-6xl leading-loose font-extrabold text-gray-800">{course.title}</h2>
-            <p className="text-2xl text-gray-600 mt-2">{course.description}</p>
+            <h2 className=" text-4xl lg:text-6xl leading-normal  font-extrabold text-gray-800">{course.title}</h2>
+            <p className="text-2xl text-gray-600 mt-8 text-justify">{course.description}</p>
           </div>
 
           <div className="flex space-x-1 mt-4">
@@ -99,7 +99,7 @@ const CourseDetail = () => {
               className="min-w-[200px] min-h-[40px] px-4 py-3 bg-yellow-400 hover:bg-yellow-500 text-white text-4xl font-semibold rounded-lg"
               onClick={handleButtonClick}
             >
-              Buy now
+              Enroll now
             </button>
           </div>
 
@@ -112,9 +112,9 @@ const CourseDetail = () => {
 
             <div className="mt-8">
               <h3 className="text-2xl font-bold text-gray-800">Course Description</h3>
-              <p className="text-xl text-gray-600 mt-4">{course.description}</p>
+              <p className="text-xl text-gray-600 mt-4 text-justify">{course.description}</p>
 
-              <ul className="space-y-3 list-disc mt-6 pl-4 text-xl text-gray-600">
+              <ul className="space-y-3 list-disc mt-6 pl-4 text-xl text-gray-600 text-justify">
                 {course.features.map((feature, index) => (
                   <li key={index}>{feature}</li>
                 ))}

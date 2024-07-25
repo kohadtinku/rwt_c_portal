@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import logo from "../assets/logo2.png"
 
 const Footer = () => {
   return (
@@ -12,7 +13,7 @@ const Footer = () => {
           <div className="footer-brand">
             <a href="#" className="logo">
               <img
-                src="./assets/images/logo-light.svg"
+                src={logo}
                 width="162"
                 height="50"
                 alt="EduWeb logo"
@@ -22,20 +23,20 @@ const Footer = () => {
               Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor
               incidid unt labore dolore.
             </p>
-            <div className="wrapper">
+            <div className="wrapper ">
               <span className="span">Add:</span>
-              <address className="address">70-80 Upper St Norwich NR2</address>
+              <address className="address">4th floor, A Wing, Block No. 8, Mangalwari Complex, near Government Polytechnic, Sadar, Nagpur, Maharashtra 440001</address>
             </div>
-            <div className="wrapper">
+            <div className="wrapper mt-6">
               <span className="span">Call:</span>
               <a href="tel:+011234567890" className="footer-link">
-                +01 123 4567 890
+              7276081626
               </a>
             </div>
-            <div className="wrapper">
+            <div className="wrapper mt-6">
               <span className="span">Email:</span>
               <a href="mailto:info@eduweb.com" className="footer-link">
-                info@eduweb.com
+                hr.royalswebtechpvtltd@gmail.com
               </a>
             </div>
           </div>
@@ -50,13 +51,13 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="footer-link">
+              <a href="/webDevelopment" className="footer-link">
                 Courses
               </a>
             </li>
             <li>
-              <a href="#" className="footer-link">
-                Instructor
+              <a href="/contact" className="footer-link">
+             Contact
               </a>
             </li>
             <li>
@@ -133,17 +134,17 @@ const Footer = () => {
             </form>
             <ul className="social-list">
               <li>
-                <a href="#" className="social-link">
+                <a href="https://www.facebook.com/royalswebtech" className="social-link">
                   <FaFacebookF />
                 </a>
               </li>
               <li>
-                <a href="#" className="social-link">
+                <a href="https://www.instagram.com/royalswebtechpvtltd/" className="social-link">
                   <FaLinkedinIn />
                 </a>
               </li>
               <li>
-                <a href="#" className="social-link">
+                <a href="https://www.instagram.com/royalswebtechpvtltd/" className="social-link">
                 <FaInstagram />
                 </a>
               </li>

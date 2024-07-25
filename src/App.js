@@ -11,6 +11,9 @@ import './App.css'; // Import your CSS
 import Home from './components/Home';
 import WebDevelopment from './components/WebDevelopment';
 import CourseDetail from './components/CourseDetail';
+import MobileAppDevelopment from './components/MobileAppDevelopment';
+import HrManagement from './components/HrManagement';
+import ContactUs from './components/contactUs';
 
 const App = () => {
   return (
@@ -27,7 +30,9 @@ const App = () => {
   
             <Route path="/webdevelopment" element={<WebDevelopment />} />
             <Route path="/coursedetail/:id" element={<CourseDetail />} />
-           
+            <Route path="/mobileApp" element={<MobileAppDevelopment />} />
+            <Route path="/hrManagement" element={<HrManagement />} />
+            {/* <Route path="/contactus" element={<ContactUs />} /> */}
             {/* Add more routes as needed */}
           </Routes>
         </main>

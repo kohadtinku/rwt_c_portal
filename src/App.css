@@ -1444,6 +1444,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: justify;
 }
 
 .enquiryForm_form {
@@ -1723,7 +1724,8 @@ grid-template-columns: 1fr;
 
 .enquiryForm_contact-form
 {
-top: -13px;
+/* top: -13px; */
+top:10px;
 left: initial;
 /* right: 70px; */
 }
