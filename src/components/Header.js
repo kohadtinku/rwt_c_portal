@@ -27,7 +27,7 @@ const Header = () => {
           </div>
           <ul className="navbar-list">
             <li className="navbar-item"><Link to='/' className="navbar-link" data-nav-link>Home</Link></li>
-            <li className="navbar-item"><a href="#about" className="navbar-link" data-nav-link>About</a></li>
+            <li className="navbar-item"><a href="/about" className="navbar-link" data-nav-link>About</a></li>
             {/* <li className="navbar-item"><a href="#courses" className="navbar-link" data-nav-link>Courses</a></li> */}
                 
             <li className=' navbar-item group max-lg:border-b max-lg:py-3 relative'>

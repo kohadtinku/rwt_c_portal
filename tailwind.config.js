@@ -6,8 +6,11 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        '350px': '350px',  // Example for 60 pixels
-      }
+        '350px': '350px',  
+      },
+      fontFamily: {
+        'league-spartan': ['"League Spartan"', 'sans-serif'],
+      },
     },
   },
   plugins: [],
