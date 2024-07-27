@@ -445,9 +445,9 @@ body {
 .hero-banner .img-holder.one {
   border-top-right-radius: 70px;
   border-bottom-left-radius: 110px;
-}
+} 
 
-.hero-banner .img-holder.two {
+ .hero-banner .img-holder.two {
   border-top-left-radius: 50px;
   border-bottom-right-radius: 90px;
 }
@@ -1114,6 +1114,63 @@ body {
     left: -10px;
   }
 
+  .hero-banner {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: flex-start;
+    gap: 30px;
+    position: relative; /* Ensure relative positioning for absolute children */
+  }
+  
+  .hero-banner .img-holder.one {
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 110px;
+  }
+  
+  .hero-banner .img-holder.two {
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 90px;
+    margin-block-start: 100px; /* Adjusted as per original code */
+  }
+  
+  .hero-banner .img-holder {
+    max-width: max-content;
+  }
+  
+  .hero-banner .img-holder.one {
+    justify-self: flex-end;
+  }
+  
+  .hero-banner .online_support {
+    position: absolute; /* Absolute positioning */
+    top: 313px; /* Adjust top position */
+    right: 230px; /* Adjust right position */
+    height: 110px;
+    width: 270px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px gray;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Set the main direction to column */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    padding: 0;
+  }
+  
+  .hero-banner .online_support span {
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-banner .contact-info {
+    flex-direction: row;
+    gap: 10px; /* Space between image and number */
+    margin-top: 10px; /* Add some space between the text and the contact info */
+  }
+  
 
 
   /**
@@ -1428,7 +1485,12 @@ body {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     z-index: 999;
   }
+
+  .online_support{
+    display: none;
+  }
 }
+
 
 
 /* contacyt form */
@@ -1777,5 +1839,35 @@ transform: translate(30%, 75%);
 transform: translate(125%, 45%);
 height: 300px;
 }
+.online_support{
+  display: none;
+}
 }
 
+/* online support home page */
+/* .online_support {
+  height: 110px;
+  width: 270px;
+  border: 1px solid black;
+  box-shadow: 0 0 10px gray;
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center; 
+  padding: 0;
+}
+
+.online_support span {
+  display: flex;
+  align-items: center;
+}
+
+.contact-info {
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 5px; 
+} */

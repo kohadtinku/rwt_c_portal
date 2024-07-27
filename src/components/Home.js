@@ -4,6 +4,7 @@ import img1 from "../assets/hero-banner-1.jpg"
 import img2 from "../assets/hero-banner-2.jpg"
 import img3 from "../assets/hero-shape-1.svg"
 import img4 from "../assets/hero-shape-1.svg"
+import call from "../assets/call-logo-removebg-preview.png"
 import img5 from "../assets/category-1.svg"
 import img6 from "../assets/category-2.svg"
 import img7 from "../assets/category-3.svg"
@@ -80,15 +81,23 @@ const Home = () => {
                 </a>
               </div>
               <figure className="hero-banner">
-                <div className="img-holder one" style={{ '--width': 270, '--height': 300 }}>
-                  <img src={img1} width="270" height="300" alt="hero banner" className="img-cover" />
-                </div>
-                <div className="img-holder two" style={{ '--width': 240, '--height': 370 }}>
-                  <img src={img2} width="240" height="370" alt="hero banner" className="img-cover" />
-                </div>
-                <img src={img3}  width="380" height="190" alt="" className="shape hero-shape-1" />
-                {/* <img src={img4} width="622" height="551" alt="" className="shape hero-shape-2" /> */}
-              </figure>
+  <div className="img-holder one" style={{ '--width': 270, '--height': 300 }}>
+    <img src={img1} width="270" height="300" alt="hero banner" className="img-cover" />
+  </div>
+  <div className="img-holder two" style={{ '--width': 240, '---height': 370 }}>
+    <img src={img2} width="240" height="370" alt="hero banner" className="img-cover" />
+  </div>
+  <div className="online_support">
+    <span>
+      <b style={{ color: "gray" }}>ONLINE SUPPORT</b>
+    </span>
+    <span className="contact-info">
+      <img src={call} style={{ height: "40px" }} alt="Call" />
+      <b style={{ color: "red" }}>+91 7276081626</b>
+    </span>
+  </div>
+</figure>
+
             </div>
           </section>
 
